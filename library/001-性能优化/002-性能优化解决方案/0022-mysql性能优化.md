@@ -1,5 +1,7 @@
 # mysql性能优化
 
+[TOC]
+
 ## 一、数据库优化的必要性
 
 ### 1、避免网站页面出现访问错误
@@ -46,7 +48,7 @@
 
 ### 1、图解优化层面
 
-![1590134335658](E:\mypro\book\library\002-images\1590134335658.png)
+![1590134335658](https://smartan123.github.io/book/library/002-images/1590134335658.png)
 
 
 
@@ -328,13 +330,13 @@ user_group_gid_ind 索引（ key: user_group_gid_ind ）， user 表利用到了
 
 我的操作系统是centos7，所以我选择如下的版本，大家可以根据自己的系统版本选择对应的版本来安装。
 
-![1590134790029](E:\mypro\book\library\002-images\1590134790029.png)
+![1590134790029](https://smartan123.github.io/book/library/002-images/1590134790029.png)
 
 
 
 **2）、点击Download，选择最下面的No thanks，just start my download，如下图：**
 
-![1590134868821](E:\mypro\book\library\002-images\1590134868821.png)
+![1590134868821](https://smartan123.github.io/book/library/002-images/1590134868821.png)
 
 **3）、安装过程**
 
@@ -415,7 +417,7 @@ select @@version;
 
 注意：这里是2个@符号
 
-![1590135050493](E:\mypro\book\library\002-images\1590135050493.png)
+![1590135050493](https://smartan123.github.io/book/library/002-images/1590135050493.png)
 
 我们用的是当前最新的mysql8.0.20版本。
 
@@ -427,7 +429,7 @@ select @@version;
 
 示例数据：[https](https://dev.mysql.com/doc/sakila/en/sakila-installation.html)[://dev.mysql.com/doc/sakila/en/sakila-installation.html](https://dev.mysql.com/doc/sakila/en/sakila-installation.html)  
 
-![1590135125990](E:\mypro\book\library\002-images\1590135125990.png)
+![1590135125990](https://smartan123.github.io/book/library/002-images/1590135125990.png)
 
 具体的下载操作请同学们观看视频，这里不再赘述。
 
@@ -439,7 +441,7 @@ select @@version;
 
 **4）、表结构关系**
 
-![1590135175326](E:\mypro\book\library\002-images\1590135175326.png)
+![1590135175326](https://smartan123.github.io/book/library/002-images/1590135175326.png)
 
 这里有个简单的表结构关系，这是pdman导出的物理模型。
 
@@ -457,7 +459,7 @@ select @@version;
 show slow_query_log
 ~~~
 
-![1590135275422](E:\mypro\book\library\002-images\1590135275422.png)
+![1590135275422](https://smartan123.github.io/book/library/002-images/1590135275422.png)
 
 
 
@@ -469,7 +471,7 @@ show slow_query_log
 show variables like‘%slow_query_log%';  
 ~~~
 
-![1590135299750](E:\mypro\book\library\002-images\1590135299750.png)
+![1590135299750](https://smartan123.github.io/book/library/002-images/1590135299750.png)
 
 
 
@@ -479,7 +481,7 @@ show variables like‘%slow_query_log%';
 set global slow_query_log=on;
      ~~~
 
-![1590135323989](E:\mypro\book\library\002-images\1590135323989.png)
+![1590135323989](https://smartan123.github.io/book/library/002-images/1590135323989.png)
 
 
 
@@ -497,7 +499,7 @@ set global  long_query_time=1;
 
 
 
-![1590135348634](E:\mypro\book\library\002-images\1590135348634.png)
+![1590135348634](https://smartan123.github.io/book/library/002-images/1590135348634.png)
 
 
 
@@ -509,7 +511,7 @@ set global  long_query_time=1;
 select sleep(11);
 ~~~
 
-![1590163223522](E:\mypro\book\library\002-images\1590163223522.png)
+![1590163223522](https://smartan123.github.io/book/library/002-images/1590163223522.png)
 
 执行
 
@@ -519,7 +521,7 @@ tail -f /var/lib/mysql/myshop02-slow.log
 
 检查慢日志记录情况,发现已经记录进来了。
 
-![1590163071054](D:\Program Files\typora-user-images\1590163071054.png)
+![1590163071054](https://smartan123.github.io/book/library/002-images/1590163071054.png)
 
 
 
@@ -539,7 +541,7 @@ set global log_queries_not_using_indexes=on;
 
 
 
-![1590135420367](E:\mypro\book\library\002-images\1590135420367.png)
+![1590135420367](https://smartan123.github.io/book/library/002-images/1590135420367.png)
 
 
 
@@ -547,13 +549,13 @@ set global log_queries_not_using_indexes=on;
 
 **打开jmeter，加入相关测试配置项，具体操作请观看视频**
 
-![1590135461237](E:\mypro\book\library\002-images\1590135461237.png)
+![1590135461237](https://smartan123.github.io/book/library/002-images/1590135461237.png)
 
 
 
 ### 5、MySQL慢查日志的存储格式解析：
 
-![1590135510952](E:\mypro\book\library\002-images\1590135510952.png)
+![1590135510952](https://smartan123.github.io/book/library/002-images/1590135510952.png)
 
 **具体的详细解析请观看视频。**
 
@@ -579,7 +581,7 @@ set global log_queries_not_using_indexes=on;
 mysqldumpslow --help
 ~~~
 
-![1590135632262](E:\mypro\book\library\002-images\1590135632262.png)
+![1590135632262](https://smartan123.github.io/book/library/002-images/1590135632262.png)
 
 **具体参数讲解请观看视频**
 
@@ -595,7 +597,7 @@ mysqldumpslow -t 10 /var/lib/mysql/myshop02-slow.log
 
 mysqldumpslow 分析的结果如下：
 
-![1590135687125](E:\mypro\book\library\002-images\1590135687125.png)
+![1590135687125](https://smartan123.github.io/book/library/002-images/1590135687125.png)
 
 日志显示：select sleep(N)语句共执行了4次，共花费了36s，平均9s/次，锁表时间0.00s，共返回行rows=4，平均1行。
 
@@ -649,7 +651,7 @@ pt-query-digest --help
 
 如出现下图信息表示已经安装成功。
 
-![1590136560904](E:\mypro\book\library\002-images\1590136560904.png)
+![1590136560904](https://smartan123.github.io/book/library/002-images/1590136560904.png)
 
 
 
@@ -663,7 +665,7 @@ pt-query-digest --help
 pt-summary
 ~~~
 
-![1590136640135](E:\mypro\book\library\002-images\1590136640135.png)
+![1590136640135](https://smartan123.github.io/book/library/002-images/1590136640135.png)
 
 可以看到服务器相关的具体信息：有系统日期，主机，更新时间，内核，平台，进程数等。
 
@@ -679,7 +681,7 @@ pt-summary
 pt-diskstats
 ~~~
 
-![1590136666750](E:\mypro\book\library\002-images\1590136666750.png)
+![1590136666750](https://smartan123.github.io/book/library/002-images/1590136666750.png)
 
 可以看到磁盘开销相关的具体信息：磁盘使用率，繁忙度等信息。
 
@@ -695,7 +697,7 @@ pt-diskstats
 pt-mysql-summary --user=root --password=123456
 ~~~
 
-![1590136690665](E:\mypro\book\library\002-images\1590136690665.png)
+![1590136690665](https://smartan123.github.io/book/library/002-images/1590136690665.png)
 
 可以看到mysql相关的具体信息：有系统时间，数据库实例，msyql服务路径，主从信息等信息。
 
@@ -711,7 +713,7 @@ pt-mysql-summary --user=root --password=123456
 pt-query-digest /var/lib/mysql/myshop02-slow.log
 ~~~
 
-![1590136716226](E:\mypro\book\library\002-images\1590136716226.png)
+![1590136716226](https://smartan123.github.io/book/library/002-images/1590136716226.png)
 
 这个统计信息内容有很多，以总-分的形式统计了慢查询日志的分析信息，有执行总时间，最小时间，最大时间，平均时间，达到95%的时间是多少，标准时间，中位时间（也就是从小到大排列，排在中间的值）等详细信息，该日志非常重要，是我们判断慢查询的重要依据。
 
@@ -727,7 +729,7 @@ pt-query-digest /var/lib/mysql/myshop02-slow.log
 pt-slave-find --host=localhost --user=root --password=123456
 ~~~
 
-![1590136765111](E:\mypro\book\library\002-images\1590136765111.png)
+![1590136765111](https://smartan123.github.io/book/library/002-images/1590136765111.png)
 
 这个命令通常DBA同学会用到，这是做完集群之后，查看主从直接的同步状态的。
 
@@ -741,7 +743,7 @@ pt-slave-find --host=localhost --user=root --password=123456
 pt-deadlock-logger --run-time=10 --interval=3 --create-dest-table --dest D=test,t=deadlocks u=root,p=123456
 ~~~
 
-![1590136821057](E:\mypro\book\library\002-images\1590136821057.png)
+![1590136821057](https://smartan123.github.io/book/library/002-images/1590136821057.png)
 
 这个命令开发的同学经常会用，通常会用来进行故障排查，当怀疑系统发生死锁的时候或者已经发生死锁的时候就可以执行这个命令进行查看。
 
@@ -757,7 +759,7 @@ pt-deadlock-logger --run-time=10 --interval=3 --create-dest-table --dest D=test,
 pt-index-usage --user=root --password=123456 --host=localhost   /var/lib/mysql/myshop02-slow.log
  ~~~
 
-![1590165589824](E:\mypro\book\library\002-images\1590165589824.png)
+![1590165589824](https://smartan123.github.io/book/library/002-images/1590165589824.png)
 
 这里日志显示，我对test库的t2表做了删除索引“idx_t2_id”这个动作。
 
@@ -771,7 +773,7 @@ pt-index-usage --user=root --password=123456 --host=localhost   /var/lib/mysql/m
 pt-duplicate-key-checker --host=localhost --user=root --password=123456
 ~~~
 
-![1590165789397](E:\mypro\book\library\002-images\1590165789397.png)
+![1590165789397](https://smartan123.github.io/book/library/002-images/1590165789397.png)
 
 日志显示，我对test库的t3表做了删除索引“idx_idc_name_id”后，又新增了这个索引。
 
@@ -787,7 +789,7 @@ pt-duplicate-key-checker --host=localhost --user=root --password=123456
 pt-ioprofile
 ~~~
 
-![1590136998457](E:\mypro\book\library\002-images\1590136998457.png)
+![1590136998457](https://smartan123.github.io/book/library/002-images/1590136998457.png)
 
 当没有大量IO的时候，查询不到信息，因为没有IO开销
 
@@ -801,7 +803,7 @@ pt-ioprofile
 pt-config-diff /etc/my.cnf /root/my_master.cnf
 ~~~
 
-![1590137030103](E:\mypro\book\library\002-images\1590137030103.png)
+![1590137030103](https://smartan123.github.io/book/library/002-images/1590137030103.png)
 
 这个通常也是用在集群中，主从复制或者出现问题排查，主机和从机差异的时候经常用到。
 
@@ -811,532 +813,281 @@ pt-config-diff /etc/my.cnf /root/my_master.cnf
 
 **11）、pt-find查找mysql表和执行命令，示例如下：**
 
-查找数据库里大于1M的表
+* 查找数据库里大于1M的表
 
 ~~~shell
 pt-find --user=root --password=123456 --tablesize +1M
 ~~~
 
-![1590166160112](E:\mypro\book\library\002-images\1590166160112.png)
+![1590166160112](https://smartan123.github.io/book/library/002-images/1590166160112.png)
 
 这里显示有4张表的大小超过1M，这个命令通常可以用来决定当表膨胀之后，比如达到百万级，这时候就需要判断是否要对表做水平或者垂直拆分，那么判断标准就可以看表的大小。
 
+* 查看表和索引大小并排序
+
+~~~shell
+pt-find --user=root --password=123456 --printf "%T\t%D.%N\n" | sort -rn
+~~~
+
+![1590168130819](https://smartan123.github.io/book/library/002-images/1590168130819.png)
+
+可以看到都已经从大到小进行排列了，最大的是test库t1表。
 
 
-查看表和索引大小并排序
 
-​      pt-find --user=root --password=123456 --printf "%T\t%D.%N\n" | sort -rn
+**12）、pt-kill 杀掉符合标准的mysql进程，示例如下：**
 
-12）、pt-kill 杀掉符合标准的mysql进程，示例如下：
+* 显示查询时间大于3秒的查询
 
+~~~shell
+pt-kill --user=root --password=123456 --busy-time 3 --print
+~~~
 
+这个命令只打印信息，不kill进程，如需要强杀进程可执行下面的命令 
 
-显示查询时间大于3秒的查询
+* kill掉大于3秒的查询
 
-pt-kill --user=root --password=123456 --busy-time 3 –print
-
- 
-
-kill掉大于3秒的查询
-
+~~~shell
 pt-kill --user=root --password=123456 --busy-time 3 --kill
+~~~
 
 
 
-13）、查看mysql授权（集群常用，授权复制），示例如下：
+**13）、查看mysql授权（集群常用，授权复制），示例如下：**
 
+~~~shell
 pt-show-grants --user=root --password=123456
 
 pt-show-grants --user=root --password=123456 --separate --revoke
+~~~
+
+![1590168448683](https://smartan123.github.io/book/library/002-images/1590168448683.png)
+
+可以看到大量的授权信息，这个命令主要也是用在集群的时候，在从机上需要和主机上进行一模一样的授权，直接可以通过这个命令获取所有的授权，然后复制过去就ok了。
 
 
 
-14）、验证数据库复制的完整性（集群常用，主从复制后检验），示例如下：
+**14）、验证数据库复制的完整性（集群常用，主从复制后检验），示例如下：**
 
-
-
+~~~shell
 pt-table-checksum --user=root --password=123456 
+~~~
 
- 
+![1590168622500](https://smartan123.github.io/book/library/002-images/1590168622500.png)
 
-
-
-
-
-
-
-## 五、三大类有问题的SQL
-
-### 查询次数多且每次查询占用时间长的sql
-
-u通常为pt-query-digest分析的前几个查询，该工具可以很清楚的看出每个SQL执行的次数及百分比等信息，执行的次数多，占比比较大的SQL
-
-### IO大的sql
-
-u注意pt-query-digest分析中的Rows examine项，扫描的行数越多，IO越大
-
-### 未命中索引的SQL
-
-upt-query-digest分析中的Rows examine 和Rows Send的对比。说明该SQL的索引命中率不高，对于这种SQL，我们要重点进行关注
+ 这个信息主要查看点是ERRORS和DIFFS的信息，如果不为0就要注意了，检查主从复制的时候是不是出现了问题。
 
 
 
+## 五、利用pt-query-digest利器查找三大类有问题的SQL
 
+### 1、查询次数多且每次查询占用时间长的sql
+
+通常为pt-query-digest分析的前几个查询，该工具可以很清楚的看出每个SQL执行的次数及百分比等信息，执行的次数多，占比比较大的SQL
+
+**具体的排查分析讲解请观看视频**
+
+### 2、IO大的sql
+
+注意pt-query-digest分析中的Rows examine项，扫描的行数越多，IO越大。
+
+**Rows examine项的具体讲解在日志分析的视频课程中，请自行查看**
+
+### 3、未命中索引的SQL
+
+pt-query-digest分析中的Rows examine 和Rows Send的对比。说明该SQL的索引命中率不高，对于这种SQL，我们要重点进行关注。
+
+**Rows examine 和Rows Send的关系和区别在视频中有详细讲解。**
 
 
 
 ## 六、通过explain分析SQL执行计划
 
-### 使用explain查询SQL的执行计划
+### 1、使用explain查询SQL的执行计划
 
-uSQL的执行计划反映出了SQL的执行效率，在执行的SQL前面加上explain即可
+SQL的执行计划反映出了SQL的执行效率，在执行的SQL前面加上explain即可
 
-![1590137424975](E:\mypro\book\library\002-images\1590137424975.png)
+![1590137424975](https://smartan123.github.io/book/library/002-images/1590137424975.png)
 
 
 
-### 执行计划的字段解释与举例
+### 2、执行计划的字段解释与举例
 
-1）、id列
+**以下列出了常见的字段解释，具体举例请观看视频**
 
-数字越大越先执行，如果数字一样大，那么就从上往下依次执行
+**1）、id列**
 
-   ，id列为null就表示这是一个结果集，不需要使用它来进行查询
+数字越大越先执行，如果数字一样大，那么就从上往下依次执行，id列为null就表示这是一个结果集，不需要使用它来进行查询。
 
+**2）、select_type列**
 
+* simple：表示不需要union操作或者不包含子查询的简单select查询，有连接查询时，外层的查询为simple，且只有一个。
+* primary：一个需要union操作或者含有子查询的select，位于最外层的查询，select_type即为primary，且只有一个。
+* union：union连接的两个select查询，第一个查询是dervied派生表，除了第一个表外，第二个以后的表select_type都是union。
+* union result：包含union的结果集，在union和union all语句中,因为它不需要参与查询，所以id字段为null。
+* dependent union：与union一样，出现在union 或union all语句中，但是这个查询要受到外部查询的影响。
+* subquery：除了from子句中包含的子查询外，其他地方出现的子查询都可能是subquery。
+* dependent subquery：与dependent union类似，表示这个subquery的查询要受到外部表查询的影响。
+* derived：from子句中出现的子查询，也叫做派生表，其他数据库中可能叫做内联视图或嵌套select。
+* materialization :物化通过将子查询结果作为一个临时表来加快查询执行速度，正常来说是常驻内存，下次查询会再次引用临时表。
 
-2）、select_type列
+**3）、table列**
 
-simple：表示不需要union操作或者不包含子查询的简单select查
+显示的查询表名，如果查询使用了别名，那么这里显示的是别名，如果不涉及对数据表的操作，那么这显示为null，如果显示为尖括号括起来的<derived N>就表示这个是临时表，后边的N就是执行计划中的id，表示结果来自于这个查询产生。如果是尖括号括起来的<union M,N>，与<derived N>类似，也是一个临时表，表示这个结果来自于union查询的id为M,N的结果集。
 
-​    询，有连接查询时，外层的查询为simple，且只有一个
+**4）、type列**
 
-u
+* system：表中只有一行数据或者是空表，且只能用于myisam和memory表，如果是Innodb引擎表，type列在这个情况通常都是all或者index。
+* const：使用唯一索引或者主键，返回记录一定是1行记录的等值where条件时，通常type是const，其他数据库也叫做唯一索引扫描。
+* eq_ref：出现在要连接多个表的查询计划中，驱动表循环获取数据，这行数据是第二个表的主键或者唯一索引，作为条件查询只返回一条数据，且必须为not null，唯一索引和主键是多列时，只有所有的列都用作比较时才会出现eq_ref。
+* ref：不像eq_ref那样要求连接顺序，也没有主键和唯一索引的要求，只要使用相等条件检索时就可能出现，常见与辅助索引的等值查找或者多列主键、唯一索引中，使用第一个列之外的列作为等值查找也会出现，总之，返回数据不唯一的等值查找就可能出现。
+* fulltext：全文索引检索，全文索引的优先级很高，若全文索引和普通索引同时存在时，mysql不管代价，优先选择使用全文索引。
+* ref_or_null：与ref方法类似，只是增加了null值的比较，实际用的不多。
+* unique_subquery：用于where中的in形式子查询，子查询返回不重复值唯一值。
+* index_subquery：用于in形式子查询使用到了辅助索引或者in常数列表，子查询可能返回重复值，可以使用索引将子查询去重。
+* range：索引范围扫描，常见于使用>,<,is null,between ,in ,like等运算符的查询中。
+* index_merge：表示查询使用了两个以上的索引，最后取交集或者并集，常见and ，or的条件使用了不同的索引，官方排序这个在ref_or_null之后，但是实际上由于要读取多个索引，性能可能大部分时间都不如range。
+* index：索引全表扫描，把索引从头到尾扫一遍，常见于使用索引列就可以处理不需要读取数据文件的查询、可以使用索引排序或者分组的查询。
+* all：这个就是全表扫描数据文件，然后再在server层进行过滤返回符合要求的记录。
 
-​    primary：一个需要union操作或者含有子查询的select，位于最外
+**type列总结：**
 
-​    层的查询，select_type即为primary，且只有一个
+**依次性能从好到差：system，const，eq_ref，ref，fulltext，ref_or_null，unique_subquery，index_subquery，range，index_merge，index，ALL，除了all之外，其他的type都可以使用到索引，除了index_merge之外，其他的type只可以用到一个索引。一般来说，好的sql查询至少达到range级别，最好能达到ref**。
 
-u
+**5）、possible_keys列**
 
-​    union：union连接的两个select查询，第一个查询是dervied派生
+查询可能使用到的索引。
 
-​    表，除了第一个表外，第二个以后的表select_type都是union
+**6）、key列**
 
-union result：包含union的结果集，在union和union all语句中
+查询真正使用到的索引，select_type为index_merge时，这里可能出现两个以上的索引，其他的select_type这里只会出现一个。
 
-​    ,因为它不需要参与查询，所以id字段为null
+**7）、key_len列**
 
-​    
+用于处理查询的索引长度，如果是单列索引，那就是整个索引长度，如果是多列索引，那么查询不一定都能使用到所有的列，具体使用到了多少个列的索引，这里就会计算进去，没有使用到的列不会计算进去。留意下这个列的值，算一下你的多列索引总长度就知道有没有使用到所有的列了。另外，key_len只计算where条件用到的索引长度，而排序和分组就算用到了索引，也不会计算到key_len中。
 
-​    dependent union：与union一样，出现在union 或union all语
+**8）、ref列**
 
-​    句中，但是这个查询要受到外部查询的影响
+如果是使用的常数等值查询，这里会显示const，如果是连接查询，被驱动表的执行计划这里会显示驱动表的关联字段，如果是条件使用了表达式或者函数，或者条件列发生了内部隐式转换，这里可能显示为func
 
+**9）、rows列**
 
+这里是执行计划中估算的扫描行数，不是精确值。
 
-​    subquery：除了from子句中包含的子查询外，其他地方出现的子
+**10）、extra列**
 
-​    查询都可能是subquery
+* no tables used：不带from字句的查询或者From dual查询。
+* NULL：查询的列未被索引覆盖，并且where筛选条件是索引的前导列，意味着用到了索引，但是部分字段未被索引覆盖，必须通过“回表”来实现，不是纯粹地用到了索引，也不是完全没用到索引。
+* using index：查询时不需要回表查询，直接通过索引就可以获取查询的数据。
+* Using where：查询的列未被索引覆盖，where筛选条件非索引的前导列。
+* Using where Using index：查询的列被索引覆盖，并且where筛选条件是索引列之一但是不是索引的前导列，意味着无法直接通过索引查找来查询到符合条件的数据。
+* Using index condition：与Using where类似，查询的列不完全被索引覆盖，where条件中是一个前导列的范围。
+* using temporary：表示使用了临时表存储中间结果。临时表可以是内存临时表和磁盘临时表，执行计划中看不出来，需要查看status变量，used_tmp_table，used_tmp_disk_table才能看出来。
+* using filesort：mysql 会对结果使用一个外部索引排序，而不是按索引次序从表里读取行。此时mysql会根据联接类型浏览所有符合条件的记录，并保存排序关键字和行指针，然后排序关键字并按顺序检索行信息。这种情况下一般也是要考虑使用索引来优化的。
+* using intersect：表示使用and的各个索引的条件时，该信息表示是从处理结果获取交集。
+* using union：表示使用or连接各个使用索引的条件时，该信息表示从处理结果获取并集。
+* using sort_union和using sort_intersection：用and和or查询信息量大时，先查询主键，然后进行排序合并后返回结果集。
+* firstmatch(tb_name)：5.6.x开始引入的优化子查询的新特性之一，常见于where字句含有in()类型的子查询。如果内表的数据量比较大，就可能出现这个。
+* loosescan(m..n)：5.6.x之后引入的优化子查询的新特性之一，在in()类型的子查询中，子查询返回的可能有重复记录时，就可能出现这个。
 
-dependent subquery：与dependent union类似，表示这
+**11）、filtered列**
 
-​    个subquery的查询要受到外部表查询的影响
-
-
-
-​    derived：from子句中出现的子查询，也叫做派生表，其他数据
-
-​    库中可能叫做内联视图或嵌套select
-
-
-
-​    materialization :物化通过将子查询结果作为一个临时表来加快查
-
-​    询执行速度，正常来说是常驻内存，下次查询会再次引用临时表。
-
-3）、table列
-
-显示的查询表名，如果查询使用了别名，那么这里显示的是别名
-
-   ，如果不涉及对数据表的操作，那么这显示为null，如果显示为
-
-​    尖括号括起来的<derived N>就表示这个是临时表，后边的N就
-
-​    是执行计划中的id，表示结果来自于这个查询产生。如果是尖括
-
-​    号括起来的<union M,N>，与<derived N>类似，也是一个临
-
-​    时表，表示这个结果来自于union查询的id为M,N的结果集
-
-4）、type列
-
-system：表中只有一行数据或者是空表，且只能用于myisam
-
-​    和memory表，如果是Innodb引擎表，type列在这个情况通常
-
-​    都是all或者index
-
-
-
-​    const：使用唯一索引或者主键，返回记录一定是1行记录的等
-
-​    值where条件时，通常type是const，其他数据库也叫做唯一索
-
-​    引扫描
-
-
-
-eq_ref：出现在要连接多个表的查询计划中，驱动表循环获取数据
-
-   ，这行数据是第二个表的主键或者唯一索引，作为条件查询只返回
-
-​    一条数据，且必须为not null，唯一索引和主键是多列时，只有所
-
-​    有的列都用作比较时才会出现eq_ref
-
-
-
-​    ref：不像eq_ref那样要求连接顺序，也没有主键和唯一索引的要
-
-​    求，只要使用相等条件检索时就可能出现，常见与辅助索引的等
-
-​    值查找或者多列主键、唯一索引中，使用第一个列之外的列作为
-
-​    等值查找也会出现，总之，返回数据不唯一的等值查找就可能出现
-
-fulltext：全文索引检索，全文索引的优先级很高，若全
-
-​    文索引和普通索引同时存在时，mysql不管代价，优先选择使用
-
-​    全文索引
-
-
-
-​    ref_or_null：与ref方法类似，只是增加了null值的比较，实际用
-
-​    的不多
-
-
-
-unique_subquery：用于where中的in形式子查询，子查询返回不
-
-​    重复值唯一值
-
-
-
-​    index_subquery：用于in形式子查询使用到了辅助索引或者in常数
-
-​    列表，子查询可能返回重复值，可以使用索引将子查询去重
-
-
-
-​    range：索引范围扫描，常见于使用>,<,is null,between ,in ,like
-
-​    等运算符的查询中
-
-
-
-index_merge：表示查询使用了两个以上的索引，最后取交集
-
-​    或者并集，常见and ，or的条件使用了不同的索引，官方排序这个
-
-​    在ref_or_null之后，但是实际上由于要读取多个索引，性能可能大
-
-​    部分时间都不如range
-
-
-
-​    index：索引全表扫描，把索引从头到尾扫一遍，常见于使用索引
-
-​    列就可以处理不需要读取数据文件的查询、可以使用索引排序或者
-
-​    分组的查询
-
-
-
-all：这个就是全表扫描数据文件，然后再在server层进行过滤返回
-
-​    符合要求的记录
-
-
-
-utype列总结：
-
-依次性能从好到差：system，const，eq_ref，ref，fulltext
-
-   ，ref_or_null，unique_subquery，index_subquery，range
-
-   ，index_merge，index，ALL，除了all之外，其他的type都可
-
-​    以使用到索引，除了index_merge之外，其他的type只可以用到
-
-​    一个索引。一般来说，好的sql查询至少达到range级别，最好能达
-
-​    到ref
-
-5）、possible_keys列
-
-查询可能使用到的索引
-
-6）、key列
-
-查询真正使用到的索引，select_type为index_merge时，这里可
-
-​    能出现两个以上的索引，其他的select_type这里只会出现一个
-
-7）、key_len列
-
-用于处理查询的索引长度，如果是单列索引，那就是整个索引长度
-
-​    ，如果是多列索引，那么查询不一定都能使用到所有的列，具
-
-​    体使用到了多少个列的索引，这里就会计算进去，没有使用到的列
-
-​    不会计算进去。留意下这个列的值，算一下你的多列索引总
-
-​    长度就知道有没有使用到所有的列了。另外，key_len只计算 
-
-​    where条件用到的索引长度，而排序和分组就算用到了索引，也不
-
-​    会计算到key_len中
-
-8）、ref列
-
-如果是使用的常数等值查询，这里会显示const，如果是连接查询
-
-   ，被驱动表的执行计划这里会显示驱动表的关联字段，如果是条件
-
-​    使用了表达式或者函数，或者条件列发生了内部隐式转换，这里可
-
-​    能显示为func
-
-9）、rows列
-
-这里是执行计划中估算的扫描行数，不是精确值
-
-
-
-10）、extra列
-
-no tables used：不带from字句的查询或者From dual查询
-
-​    
-
-​     NULL：查询的列未被索引覆盖，并且where筛选条件是索引的前
-
-​    导列，意味着用到了索引，但是部分字段未被索引覆盖，必须通过
-
-  “回表”来实现，不是纯粹地用到了索引，也不是完全没用到索引
-
-using index：查询时不需要回表查询，直接通过索引就可以获取
-
-​    查询的数据
-
-
-
-​     Using where：查询的列未被索引覆盖，where筛选条件非索引的
-
-​    前导列
-
-Using where Using index：查询的列被索引覆盖，并且where筛
-
-​    选条件是索引列之一但是不是索引的前导列，意味着无法直接通过
-
-​    索引查找来查询到符合条件的数据
-
-
-
-​    Using index condition：与Using where类似，查询的列不完全
-
-​    被索引覆盖，where条件中是一个前导列的范围；
-
-using temporary：表示使用了临时表存储中间结果。临时表可以
-
-​          是内存临时表和磁盘临时表，执行计划中看不出来，需要查看
-
-​          status变量，used_tmp_table，used_tmp_disk_table才能看出来
-
-
-
-​          using filesort：mysql 会对结果使用一个外部索引排序，而不是
-
-​          按索引次序从表里读取行。此时mysql会根据联接类型浏览所有符
-
-​          合条件的记录，并保存排序关键字和行指针，然后排序关键字并按
-
-​          顺序检索行信息。这种情况下一般也是要考虑使用索引来优化的。
-
-using intersect：表示使用and的各个索引的条件时，该信息表示
-
-​          是从处理结果获取交集
-
-
-
-​          using union：表示使用or连接各个使用索引的条件时，该信息表
-
-​          示从处理结果获取并集
-
-
-
-​          using sort_union和using sort_intersection：用and和or查询信  
-
-​          息量大时，先查询主键，然后进行排序合并后返回结果集
-
-
-
-firstmatch(tb_name)：5.6.x开始引入的优化子查询的新特性之一
-
-​         ，常见于where字句含有in()类型的子查询。如果内表的数据量比较
-
-​          大，就可能出现这个
-
-
-
-​          loosescan(m..n)：5.6.x之后引入的优化子查询的新特性之一，在
-
-​          in()类型的子查询中，子查询返回的可能有重复记录时，就可能出
-
-​          现这个
-
-
-
-11）、filtered列
-
-使用explain extended时会出现这个列，5.7之后的版本默认就有
-
-​          这个字段，不需要使用explain extended了。这个字段表示存储引
-
-​          擎返回的数据在server层过滤后，剩下多少满足查询的记录数量的
-
-​          比例，注意是百分比，不是具体记录数
+使用explain extended时会出现这个列，5.7之后的版本默认就有这个字段，不需要使用explain extended了。这个字段表示存储引擎返回的数据在server层过滤后，剩下多少满足查询的记录数量的比例，注意是百分比，不是具体记录数。
 
 
 
 ## 七、慢查询优化思路及案例
 
-### 慢查询的优化思路
+### 1、慢查询的总体优化思路
 
-u优化更需要优化的SQL
+* 优化更需要优化的SQL
+* 定位优化对象的性能瓶颈
+* 明确的优化目标
+* 从explain执行计划入手
+* 永远用小结果集驱动大的结果集
+* 尽可能在索引中完成排序
+* 只取出自己需要的列，不要用select *
+* 仅使用最有效的过滤条件
+* 尽可能避免复杂的join和子查询
+* 小心使用order by，group by，distinct语句
+* 合理设计并利用索引
 
-u定位优化对象的性能瓶颈
-
-u明确的优化目标
-
-u从explain执行计划入手
-
-u永远用小结果集驱动大的结果集
-
-u尽可能在索引中完成排序
-
-u只取出自己需要的列，不要用select *
-
-u仅使用最有效的过滤条件
-
-u尽可能避免复杂的join和子查询
-
-u小心使用order by，group by，distinct语句
-
-u合理设计并利用索引
+**以上优化思路的具体说明请观看视频**
 
 
 
-### 永远用小结果集驱动大的结果集（join操作表小于百万级别）
+### 2、永远用小结果集驱动大的结果集（join操作表小于百万级别）
 
-1）、驱动表的定义
+**1）、驱动表的定义**
 
 当进行多表连接查询时， [驱动表] 的定义为：
 
-​    
+* 指定了联接条件时，满足查询条件的记录行数少的表为[驱动表]
+* 未指定联接条件时，行数少的表为[驱动表]
 
-​    1）指定了联接条件时，满足查询条件的记录行数少的表为[驱动表]
+**2）、mysql关联查询的概念**
 
-​    
+MySQL 表关联的算法是 Nest Loop Join，是通过驱动表的结果集作为循环基础数据，然后一条一条地通过该结果集中的数据作为过滤条件到下一个表中查询数据，最后合并结果。
 
-​    2）未指定联接条件时，行数少的表为[驱动表]
+**3）、left join，right join，inner join的区别**
 
+**具体说明见视频**
 
+* left join
 
-2）、mysql关联查询的概念
+    ~~~sql
+select * from t2 left join t3 on t2.id =t3.id and t3.id in(1,2,3) order by t2.id desc;   
+    ~~~
 
-MySQL 表关联的算法是 Nest Loop Join，是通过驱动表的结果
+![1590138071280](https://smartan123.github.io/book/library/002-images/1590138071280.png)
 
-​     集作为循环基础数据，然后一条一条地通过该结果集中的数据作为
+* right join
 
-​     过滤条件到下一个表中查询数据，最后合并结果
+     ~~~sql
+select * from t2 right join t3 on t2.id =t3.id and t3.id in(1,2,3);
+     ~~~
 
+![1590138104851](https://smartan123.github.io/book/library/002-images/1590138104851.png)
 
+* inner join
 
-3）、left
-join，right join，inner join的区别
+    ~~~sql
+select * from t2 inner join t3 on t2.id =t3.id and t3.id in(1,2,3);
+    ~~~
 
-uleft join
+![1590138132238](https://smartan123.github.io/book/library/002-images/1590138132238.png)
 
-​    select * from t2 left join t3 on t2.id =t3.id and t3.id in(1,2,3) 
+### 3、join的实现原理
 
-​    order by t2.id desc;   
+**具体的原理讲解请观看视频**
 
-![1590138071280](E:\mypro\book\library\002-images\1590138071280.png)
+**1）、mysql只支持一种join算法：** 
 
-4）、right join
+Nested-Loop Join（嵌套循环连接），但Nested-Loop Join有三种变种：
 
-​     select * from t2 right join t3 on t2.id =t3.id and t3.id 
+* Simple Nested-Loop Join（简单嵌套循环）
+* Index Nested-Loop Join（索引嵌套循环）
+* Block Nested-Loop Join（块嵌套循环）
 
-​     in(1,2,3);
+**2）、Simple Nested-Loop Join（简单嵌套循环）**
 
-![1590138104851](E:\mypro\book\library\002-images\1590138104851.png)
+![1590138182449](https://smartan123.github.io/book/library/002-images/1590138182449.png)
 
-5）、inner join
+**3）、Index Nested-Loop Join（索引嵌套循环）**
 
-​     select * from t2 inner join t3 on t2.id =t3.id and t3.id 
+![1590138214174](https://smartan123.github.io/book/library/002-images/1590138214174.png)
 
-​     in(1,2,3);
+**4）、Block Nested-Loop Join（块嵌套循环）**
 
-![1590138132238](E:\mypro\book\library\002-images\1590138132238.png)
+![1590138232983](https://smartan123.github.io/book/library/002-images/1590138232983.png)
 
-### join的实现原理
+**5）、Block Nested-Loop Join（3表）**
 
-1）、mysql只支持一种join算法： 
+![1590138251673](https://smartan123.github.io/book/library/002-images/1590138251673.png)
 
-​    
+### 4、join的优化思路
 
-​    Nested-Loop Join（嵌套循环连接）
-
-​    
-
-​    但Nested-Loop Join有三种变种：
-
-​    Simple Nested-Loop Join
-
-​    Index Nested-Loop Join
-
-​    Block Nested-Loop Join
-
-2）、Simple
-Nested-Loop
-Join（简单嵌套循环）
-
-![1590138182449](E:\mypro\book\library\002-images\1590138182449.png)
-
-3）、Index
-Nested-Loop
-Join（索引嵌套循环）
-
-![1590138214174](E:\mypro\book\library\002-images\1590138214174.png)
-
-4）、Block
-Nested-Loop
-Join（块嵌套循环）
-
-![1590138232983](E:\mypro\book\library\002-images\1590138232983.png)
-
-5）、Block
-Nested-Loop
-Join（3表）
-
-![1590138251673](E:\mypro\book\library\002-images\1590138251673.png)
-
-### join的优化思路
+**具体的思路讲解见视频**
 
 1）、尽可能减少join语句中的Nested Loop的循环总次数
 
@@ -1346,252 +1097,209 @@ Join（3表）
 
 4）、无法保证被驱动表的 Join 条件字段被索引且内存资源充足的前提下，不要太吝惜join Buffer的设置
 
-### join的优化思路总结
 
-1）、并发量太高的时候，系统整体性能可能会急
-剧下降
 
-2）、复杂的 Join 语句，所需要锁定的资源也就越多，所
-阻塞的其他线程也就越多
+### 5、join的优化思路总结
 
-3）、复杂的 Query 语句分拆成多个较为简单的 Query 语
-句分步执行
+1）、并发量太高的时候，系统整体性能可能会急剧下降。
 
-### 只取出需要的列，不要用select *
+2）、复杂的 Join 语句，所需要锁定的资源也就越多，所阻塞的其他线程也就越多
 
-u如果取出的列过多，则传输给客户端的数据量必然很大，浪费带宽
+3）、复杂的 Query 语句分拆成多个较为简单的 Query 语句分步执行
 
-u若在排序的时候输出过多的列，则会浪费内存（Using filesort）
 
-u若在排序的时候输出过多的列，还有可能改变执行计划
 
-### 仅使用最有效的过滤条件
+### 6、只取出需要的列，不要用select *
 
-uWhere字句中条件越多越好吗？
+1）、如果取出的列过多，则传输给客户端的数据量必然很大，浪费带宽
 
-u若在多种条件下都使用了索引，那如何选择？
+2）、若在排序的时候输出过多的列，则会浪费内存（Using filesort）
 
-u最终选择方案：key_len的长度决定使用哪个条件
+3）、若在排序的时候输出过多的列，还有可能改变执行计划
 
-### 尽可能在索引中完成排序
+**具体讲解及演示见视频**
 
-uorder
-by 字句中的字段加索引（扫描索引即可，内存中完成，逻辑io）
 
-u若不加索引的话会可能会启用一个临时文件辅助排序（落盘，物理io）
 
-### order by排序原理及优化思路
+### 7、仅使用最有效的过滤条件
 
-uorder
-by排序可利用索引进行优化，order by子句中只要是索引的前导列都可以使索引生效，可以直接在索引中排序，不需要在额外的内存或者文件中排序
+1）、Where字句中条件越多越好吗？
 
-u不能利用索引避免额外排序的情况，例如：排序字段中有多个索引，排序顺序和索引键顺序不一致（非前导列）
+2）、若在多种条件下都使用了索引，那如何选择？
 
-### order by排序算法
+3）、最终选择方案：key_len的长度决定使用哪个条件
 
-uMySQL对于不能利用索引避免排序的SQL，数据库不得不自己实现排序功能以满足用户需求，此时SQL的执行计划中会出现“Using filesort”，这里需要注意的是filesort并不意味着就是文件排序，其实也有可能是内存排序，这个主要由sort_buffer_size参数与结果集大小确定。MySQL内部实现排序主要有3种方式，常规排序，优化排序和优先队列排序，主要涉及3种排序算法：快速排序、归并排序和堆排序
+**具体讲解及演示见视频**
 
-1）、order by常规排序算法
 
-u步骤：
 
+### 8、尽可能在索引中完成排序
 
+* order by 字句中的字段加索引（扫描索引即可，内存中完成，逻辑io）。
+* 若不加索引的话会可能会启用一个临时文件辅助排序（落盘，物理io）。
 
-​    (1).从表t1中获取满足WHERE条件的记录
-​     (2).对于每条记录，将记录的主键+排序键(id,col2)取出放入sort   
+**具体讲解及演示见视频**
 
-​    buffer
-​     (3).如果sort buffer可以存放所有满足条件的(id,col2)对，则进行
 
-​    排序；否则sort buffer满后，进行排序并固化到临时文件中。
 
-​    (排序算法采用的是快速排序算法)
+### 9、order by排序原理及优化思路
 
-(4).若排序中产生了临时文件，需要利用归并排序算法，保证临时
+* order by排序可利用索引进行优化，order by子句中只要是索引的前导列都可以使索引生效，可以直接在索引中排序，不需要在额外的内存或者文件中排序。
+* 不能利用索引避免额外排序的情况，例如：排序字段中有多个索引，排序顺序和索引键顺序不一致（非前导列）
 
-​    文件中记录是有序的
-​     (5).循环执行上述过程，直到所有满足条件的记录全部参与排序
-​     (6).扫描排好序的(id,col2)对，并利用id去捞取SELECT需要返回的
+**具体讲解及演示见视频**
 
-​    列(col1,col2,col3)
-​     (7).将获取的结果集返回给用户。
 
 
+### 10、order by排序算法
 
-2）、order by优化排序算法
+MySQL对于不能利用索引避免排序的SQL，数据库不得不自己实现排序功能以满足用户需求，此时SQL的执行计划中会出现“Using filesort”，这里需要注意的是filesort并不意味着就是文件排序，其实也有可能是内存排序，这个主要由sort_buffer_size参数与结果集大小确定。MySQL内部实现排序主要有3种方式，常规排序，优化排序和优先队列排序，主要涉及3种排序算法：快速排序、归并排序和堆排序
 
-u常规排序方式除了排序本身，还需要额外两次IO。优化的排序方式相对于常规排序，减少了第二次IO。主要区别在于，放入sort buffer不是(id,col2),而是(col1,col2,col3)。由于sort buffer中包含了查询需要的所有字段，因此排序完成后可以直接返回，无需二次捞数据。这种方式的代价在于，同样大小的sort buffer，能存放的(col1,col2,col3)数目要小于(id,col2)，如果sort buffer不够大，可能导致需要写临时文件，造成额外的IO
+**1）、order by常规排序算法**
 
-3）、order by优先队列排序算法
+步骤：
 
-u5.6及之后的版本针对Order by limit M，N语句，在空间层面做了优化，加入了一种新的排序方式--优先队列，这种方式采用堆排序实现。堆排序算法特征正好可以解limit M，N 这类排序的问题，虽然仍然需要所有元素参与排序，但是只需要M+N个元组的sort buffer空间即可，对于M，N很小的场景，基本不会因为sort buffer不够而导致需要临时文件进行归并排序的问题。对于升序，采用大顶堆，最终堆中的元素组成了最小的N个元素，对于降序，采用小顶堆，最终堆中的元素组成了最大的N的元素。
+* 从表t1中获取满足WHERE条件的记录。
+* 对于每条记录，将记录的主键+排序键(id,col2)取出放入sort buffer。
+* 如果sort buffer可以存放所有满足条件的(id,col2)对，则进行排序；否则sort buffer满后，进行排序并固化到临时文件中。(排序算法采用的是快速排序算法)
+* 若排序中产生了临时文件，需要利用归并排序算法，保证临时文件中记录是有序的。
+* 循环执行上述过程，直到所有满足条件的记录全部参与排序。
+* 扫描排好序的(id,col2)对，并利用id去捞取SELECT需要返回的列(col1,col2,col3)。
+* 将获取的结果集返回给用户。
 
-### order by排序不一致问题
+**2）、order by优化排序算法**
 
-1）、MySQL5.6发现分页出现了重复值
+常规排序方式除了排序本身，还需要额外两次IO。
 
-![1590138617922](E:\mypro\book\library\002-images\1590138617922.png)
+优化的排序方式相对于常规排序，减少了第二次IO。
 
-2）、MySQL8查询正常
+主要区别在于，放入sort buffer不是(id,col2),而是(col1,col2,col3)。由于sort buffer中包含了查询需要的所有字段，因此排序完成后可以直接返回，无需二次捞数据。这种方式的代价在于，同样大小的sort buffer，能存放的(col1,col2,col3)数目要小于(id,col2)，如果sort buffer不够大，可能导致需要写临时文件，造成额外的IO。
 
-![1590138644673](E:\mypro\book\library\002-images\1590138644673.png)
+**3）、order by优先队列排序算法**
 
-3）、原因分析及解决方案
+5.6及之后的版本针对Order by limit M，N语句，在空间层面做了优化，加入了一种新的排序方式--优先队列，这种方式采用堆排序实现。堆排序算法特征正好可以解limit M，N 这类排序的问题，虽然仍然需要所有元素参与排序，但是只需要M+N个元组的sort buffer空间即可，对于M，N很小的场景，基本不会因为sort buffer不够而导致需要临时文件进行归并排序的问题。
 
-针对limit M,N的语句采用了优先队列，而优先队列采用堆实现，
+对于升序，采用大顶堆，最终堆中的元素组成了最小的N个元素，对于降序，采用小顶堆，最终堆中的元素组成了最大的N的元素。
 
-​    比如上述的例子order by idc limit 0，3 需要采用大小为3的大
+### 11、order by排序不一致问题
 
-​    顶堆；limit 3，3需要采用大小为6的大顶堆。由于idc为3的记录有
+**1）、MySQL5.6发现分页出现了重复值**
 
-​    3条，而堆排序是非稳定的(对于相同的key值，无法保证排序后与
+![1590138617922](https://smartan123.github.io/book/library/002-images/1590138617922.png)
 
-​    排序前的位置一致)，所以导致分页重复的现象。为了避免这个问
+**2）、MySQL8查询正常**
 
-​    题，我们可以在排序中加上唯一值，比如主键id，这样由于id是唯
+![1590138644673](https://smartan123.github.io/book/library/002-images/1590138644673.png)
 
-​    一的，确保参与排序的key值不相同
+**3）、原因分析及解决方案**
 
-### order by排序案例演示
+针对limit M,N的语句采用了优先队列，而优先队列采用堆实现，比如上述的例子order by idc limit 0，3 需要采用大小为3的大顶堆；limit 3，3需要采用大小为6的大顶堆。由于idc为3的记录有3条，而堆排序是非稳定的(对于相同的key值，无法保证排序后与排序前的位置一致)，所以导致分页重复的现象。为了避免这个问题，我们可以在排序中加上唯一值，比如主键id，这样由于id是唯一的，确保参与排序的key值不相同。
 
-u演示sql及思路：
+### 12、order by排序案例演示
 
-​     
+演示sql及思路：
 
-​     explain select idc, max(name) from t3 where id>2 and id<10   
+~~~sql
+explain select idc, max(name) from t3 where id>2 and id<10 order by idc,name,id\G
+~~~
 
-​     order by idc，name,id\G
+分别在查询字段，where条件，分组字段上做出各种可能的组合，主要就是看有无索引，索引在以上三个关注点上的生效情况。
 
+**order by排序的多种案例优化演示请观看视频**
 
+### 13、group by分组优化思路
 
-​           分别在查询字段，where条件，分组字段上做出各种可能的组合，
+group by本质上也同样需要进行排序操作，而且与 order by相比，group by主要只是多了排序之后的分组操作。如果在分组的时候还使用了其他的一些聚合函数，那么还需要一些聚合函数的计算。所以，在group by的实现过程中，与group by一样也可以利用到索引。
 
-​           主要就是看有无索引，索引在以上三个关注点上的生效情况
+**具体案例及优化演示讲观看视频**
 
-### group by分组优化思路
+### 14、group by的类型
 
-ugroup by本质上也同样需要进行排序操作，而且与 order by相比，group by主要只是多了排序之后的分组操作。如果在分组的时候还使用了其他的一些聚合函数，那么还需要一些聚合函数的计算。所以，在group by的实现过程中，与group by一样也可以利用到索引
+三种实现类型：
 
+* Loose Index Scan（松散的索引扫描）
 
+扫描过程：
 
-### group by的类型
+先根据group by后面的字段进行分组，分组不需要读取所有索引的key，例如index（key1，key2，key3），group by key1，key2。此时只要读取索引中的key1，key2。然后再根据where条件进行筛选。
 
-u三种实现类型
 
-​     
 
-​           Loose Index Scan（松散的索引扫描）
+* Tight Index Scan（紧凑的索引扫描）
 
-u扫描过程
+扫描过程：
 
-​           
+紧凑索引扫描需要在扫描索引的时候，读取所有满足条件的索引键，然后再根据读取的数据来完成 GROUP BY 操作得到相应结果。
 
-​           先根据group by后面的字段进行分组，分组不需要读取所有索引   
+两者区别就是紧凑索引扫描是先执行where操作，再进行分组，松散索引扫描刚好相反
 
-​           的key，例如index（key1，key2，key3），group by key1，
 
-​           key2。此时只要读取索引中的key1，key2。然后再根据where条
 
-​           件进行筛选
+* Using temporary 临时表实现 （非索引扫描）
 
+扫描过程：
 
+MySQL 在进行GROUP BY 操作的时候当MySQL Query Optimizer无法找到合适的索引可以利用的时候，就不得不先读取需要的数据，然后通过临时表来完成 GROUP BY操作。
 
-​           Tight Index Scan（紧凑的索引扫描）
 
-u扫描过程
 
-​           
+### 15、group by分组案例演示
 
-​           紧凑索引扫描需要在扫描索引的时候，读取所有满足条件的索引键
+演示sql及思路：
 
-​          ，然后再根据读取的数据来完成 GROUP BY 操作得到相应结果。
+~~~sql
+explain select idc, max(name) from t3 where id>2 and id<10 group by idc,name,id\G
+~~~
 
-​           区别就是紧凑索引扫描是先执行where操作，再进行分组，松散索
+和order by一样，分别在查询字段，where条件，分组字段上做出各种可能的组合，主要就是看有无索引，索引在以上三个关注点上的生效情况。
 
-​           引扫描刚好相反
+**具体案例及优化演示讲观看视频**
 
 
 
-​           Using temporary 临时表实现 （非索引扫描）
+### 16、distinct的实现及优化思路
 
-u扫描过程
+**1）、distinct的原理**
 
-​           
+distinct实际上和 GROUP BY 的操作非常相似，在GROUP BY之后的每组中只取出一条记录而已。所以，DISTINCT的实现和GROUP BY的实现也基本差不多，同样可以通过松散索引扫描或者是紧凑索引扫描来实现，当然，在无法仅仅使用索引即能完成DISTINCT的时候， MySQL只能通过临时表来完成。但是，和GROUP BY有一点差别的是，DISTINCT并不需要进行排序。 
 
-​           MySQL 在进行GROUP BY 操作的时候当MySQL Query 
+**2）、distinct案例演示** 
 
-​           Optimizer无法找到合适的索引可以利用的时候，就不得不先读取
+演示sql及思路：
 
-​           需要的数据，然后通过临时表来完成 GROUP BY操作
+~~~sql
+explain select distinct name from t3 where idc=3\G
+~~~
 
-### group by分组案例演示
+（索引中完成，索引默认是排好序的）
 
-u演示sql及思路：
 
-​     
 
-​     explain select idc, max(name) from t3 where id>2 and id<10   
+~~~sql
+explain select distinct name from t3 where idc>1\G
+~~~
 
-​     group by idc，name,id\G
+（非索引中完成，暗藏排序问题）
 
+  **具体案例及优化演示讲观看视频**
 
 
-​           和order by一样，分别在查询字段，where条件，分组字段上做出
 
-​           各种可能的组合，主要就是看有无索引，索引在以上三个关注点上
+### 17、合理的设计并利用索引
 
-​           的生效情况
+**索引原理**
 
+![1590139243028](https://smartan123.github.io/book/library/002-images/1590139243028.png)
 
+### 18、索引失效案例
 
-### distinct的实现及优化思路
+**具体案例见视频**
 
-1）、distinct的原理
+### 19、优化终级奥义
 
-​        
+* 针对百万数量级，放弃在mysql中的join操作，推荐分别根据索引单表取数据，然后在程序里面做join，merge数据。
+* 尽量使用nosql，例如redis， memcached 等来缓存热点数据，从而缓解mysql压力。
 
-​    distinct实际上和 GROUP BY 的操作非常相似，在GROUP BY之后
 
-​    的每组中只取出一条记录而已。所以，DISTINCT的实现和GROUP 
 
-​    BY的实现也基本差不多，同样可以通过松散索引扫描或者是紧凑索
-
-​    引扫描来实现，当然，在无法仅仅使用索引即能完成DISTINCT的
-
-​    时候， MySQL只能通过临时表来完成。但是，和GROUP BY有一
-
-​    点差别的是，DISTINCT并不需要进行排序。 
-
-
-
-2）、distinct案例演示 
-
-u演示sql及思路：
-
-​     
-
-​     explain select distinct name from t3 where idc=3\G
-
-​     （索引中完成，索引默认是排好序的）
-
-
-
-​           explain select distinct name from t3 where idc>1\G
-
-​           （非索引中完成，暗藏排序问题）
-
-
-
-### 合理的设计并利用索引
-
-![1590139243028](E:\mypro\book\library\002-images\1590139243028.png)
-
-### 索引失效案例
-
-
-
-### 优化终级奥义
-
-u针对百万数量级，放弃在mysql中的join操作，推荐分别根据索引单表取数据，然后在程序里面做join，merge数据。
-
-u尽量使用nosql，例如redis， memcached 等来缓存热点数据，从而缓解mysql压力。
+## 未完，待续。。。

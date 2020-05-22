@@ -463,9 +463,9 @@ show slow_query_log
 
 
 
-**2）、检查慢日志路径：**
+**2）、检查慢查日志路径：**
 
-​    执行如下命令查看日志路径
+执行如下命令查看日志路径
 
 ~~~sql
 show variables like‘%slow_query_log%';  
@@ -475,17 +475,18 @@ show variables like‘%slow_query_log%';
 
 
 
-**3）、开启慢日志：**
+**3）、开启慢查日志：**
 
-     ~~~sql
+执行如下命令开启慢查日志
+
+```sql
 set global slow_query_log=on;
-     ~~~
-
+```
 ![1590135323989](https://smartan123.github.io/book/library/002-images/1590135323989.png)
 
 
 
-**4）、慢日志判断标准（默认查询时间大于10s的sql语句）：**
+**4）、慢查日志判断标准（默认查询时间大于10s的sql语句）：**
 
 ~~~sql
 show variables like 'long_query_time';
@@ -503,7 +504,7 @@ set global  long_query_time=1;
 
 
 
-**5）、慢日志测试：**
+**5）、慢查日志测试：**
 
 执行如下sql，休眠11秒，超过10秒，迫使该sql进慢查日志
 
@@ -519,13 +520,13 @@ select sleep(11);
 tail -f /var/lib/mysql/myshop02-slow.log
 ~~~
 
-检查慢日志记录情况,发现已经记录进来了。
+检查慢查日志记录情况,发现已经记录进来了。
 
 ![1590163071054](https://smartan123.github.io/book/library/002-images/1590163071054.png)
 
 
 
-**6）为了测试方便，所有查询都记录进慢日志：**
+**6）为了测试方便，所有查询都记录进慢查日志：**
 
 先检查下使用索引情况
 
@@ -731,7 +732,7 @@ pt-slave-find --host=localhost --user=root --password=123456
 
 ![1590136765111](https://smartan123.github.io/book/library/002-images/1590136765111.png)
 
-这个命令通常DBA同学会用到，这是做完集群之后，查看主从直接的同步状态的。
+这个命令通常DBA同学会用到，这是做完集群之后，查看主从之间的同步状态的。
 
 
 

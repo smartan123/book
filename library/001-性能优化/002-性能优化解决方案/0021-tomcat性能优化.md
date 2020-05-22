@@ -19,7 +19,7 @@ tomcat服务器在JavaEE项目中使用率非常高，所以在生产环境对to
 1、下载并安装：
 https://tomcat.apache.org/download-90.cgi
 
-![1590121351339](D:\Program Files\typora-user-images\1590121351339.png)
+![1590121351339](https://smartan123.github.io/book/library/002-images/1590121351339.png)
 
 
 
@@ -70,13 +70,13 @@ cd /usr/local/tomcat9/bin/
 http://192.168.0.108:8080/
 ```
 
-![1590121685453](D:\Program Files\typora-user-images\1590121685453.png)
+![1590121685453](https://smartan123.github.io/book/library/002-images/1590121685453.png)
 
 点击“Server Status”，输入用户名、密码进行登录，tomcat/tomcat 
 
-![1590121775427](D:\Program Files\typora-user-images\1590121775427.png)
+![1590121775427](https://smartan123.github.io/book/library/002-images/1590121775427.png)
 
-![1590121821075](D:\Program Files\typora-user-images\1590121821075.png)
+![1590121821075](https://smartan123.github.io/book/library/002-images/1590121821075.png)
 
 进入之后即可看到服务器的信息。（进去看看）
 
@@ -88,7 +88,7 @@ http://192.168.0.108:8080/
 
 在服务状态页面中可以看到，默认状态下会启用AJP服务，并且占用8009端口 。
 
-![1584371833741](D:\Program Files\typora-user-images\1584371833741.png)
+![1584371833741](https://smartan123.github.io/book/library/002-images/1584371833741.png)
 
 **ps：为了演示，需要把server.xml文件ajp connector屏蔽段放开**
 
@@ -98,7 +98,7 @@ http://192.168.0.108:8080/
 AJP（Apache JServer Protocol）
 AJPv13协议是面向包的。WEB服务器和Servlet容器通过TCP连接来交互；为了节省SOCKET创建的昂贵代价，WEB服务器会尝试维护一个永久TCP连接到servlet容器，并且在多个请求和响应周期过程会重用连接。 
 
-![1584372984407](D:\Program Files\typora-user-images\1584372984407.png)
+![1584372984407](https://smartan123.github.io/book/library/002-images/1584372984407.png)
 
 我们一般是使用Nginx+tomcat的架构，所以用不着AJP协议，所以把AJP连接器禁用。
 修改conf下的server.xml文件，将AJP服务禁用掉即可 。
@@ -177,7 +177,7 @@ redirectPort="8443" />
 
 *简单地说，nio 模式最大化压榨了CPU，把时间片更好利用起来。通俗地说，bio hold住连接不干活也占用线程，nio hold住连接不干活也没关系，让需要处理的连接执行就行了。*
 
-![1584412993647](D:\Program Files\typora-user-images\1584412993647.png)
+![1584412993647](https://smartan123.github.io/book/library/002-images/1584412993647.png)
 
 可以看到已经设置为nio2了 。
 
@@ -323,7 +323,7 @@ CATALINA_OPTS="$CATALINA_OPTS -Dcom.sun.management.jmxremote -Djava.rmi.server.h
 
 查看管理页面
 
-![1584455329184](D:\Program Files\typora-user-images\1584455329184.png)
+![1584455329184](https://smartan123.github.io/book/library/002-images/1584455329184.png)
 
 
 
@@ -333,7 +333,7 @@ CATALINA_OPTS="$CATALINA_OPTS -Dcom.sun.management.jmxremote -Djava.rmi.server.h
 
 部署一个简单的servlet测试用例，模拟业务耗时2000ms
 
-![1590120356923](D:\Program Files\typora-user-images\1590120356923.png)
+![1590120356923](https://smartan123.github.io/book/library/002-images/1590120356923.png)
 
 ### 2、准备好test-web.war上传到linux服务器，进行部署安装
 
@@ -341,7 +341,7 @@ CATALINA_OPTS="$CATALINA_OPTS -Dcom.sun.management.jmxremote -Djava.rmi.server.h
 
 ### 3、访问首页，查看是否已经启动成功：http://192.168.0.108:8080/test-web
 
-![1590120456428](D:\Program Files\typora-user-images\1590120456428.png)
+![1590120456428](https://smartan123.github.io/book/library/002-images/1590120456428.png)
 
 出现此页面说明部署成功！
 
@@ -353,13 +353,13 @@ CATALINA_OPTS="$CATALINA_OPTS -Dcom.sun.management.jmxremote -Djava.rmi.server.h
 
 http://jmeter.apache.org/download_jmeter.cgi 
 
-![1590119770127](D:\Program Files\typora-user-images\1590119770127.png)
+![1590119770127](https://smartan123.github.io/book/library/002-images/1590119770127.png)
 
 
 
 ### 2、修改主题和语言：主题修改为白底黑字，语言修改为中文
 
-![1590119834399](D:\Program Files\typora-user-images\1590119834399.png)
+![1590119834399](https://smartan123.github.io/book/library/002-images/1590119834399.png)
 
 
 
@@ -367,13 +367,13 @@ http://jmeter.apache.org/download_jmeter.cgi
 
 线程组设置：1000个线程，每个线程循环10次，间隔为1秒（具体其他设置见视频）
 
-![1590119898801](D:\Program Files\typora-user-images\1590119898801.png)
+![1590119898801](https://smartan123.github.io/book/library/002-images/1590119898801.png)
 
 ### 4、启动、进行测试：详见操作
 
 设置完毕后点击绿色的三角按钮启动压测（具体其他操作见视频）
 
-![1590119997149](D:\Program Files\typora-user-images\1590119997149.png)
+![1590119997149](https://smartan123.github.io/book/library/002-images/1590119997149.png)
 
 
 
@@ -381,7 +381,7 @@ http://jmeter.apache.org/download_jmeter.cgi
 
 具体的压测结果在聚合报告中查看，如下图所示
 
-![1590120074217](D:\Program Files\typora-user-images\1590120074217.png)
+![1590120074217](https://smartan123.github.io/book/library/002-images/1590120074217.png)
 
 
 
@@ -395,11 +395,11 @@ http://jmeter.apache.org/download_jmeter.cgi
 
 （tomcat曝出ajp漏洞后，官方已打完补丁，现在该配置默认是屏蔽的。本人在b站有使用python脚本模拟黑客利用ajp漏洞进行攻击获取class文件的免费视频演示，感兴趣的同学可以去看下）：
 
-![1590113891490](D:\Program Files\typora-user-images\1590113891490.png)
+![1590113891490](https://smartan123.github.io/book/library/002-images/1590113891490.png)
 
 禁用后进行压测，查看吞吐量
 
-![1590114400031](D:\Program Files\typora-user-images\1590114400031.png)
+![1590114400031](https://smartan123.github.io/book/library/002-images/1590114400031.png)
 
 压测结果如下（禁用ajp）
 
@@ -409,7 +409,7 @@ http://jmeter.apache.org/download_jmeter.cgi
 
 取消ajp屏蔽后，重启tomcat，继续压测，查看吞吐量
 
-![1590114674399](D:\Program Files\typora-user-images\1590114674399.png)
+![1590114674399](https://smartan123.github.io/book/library/002-images/1590114674399.png)
 
 压测结果如下（使用ajp）
 
@@ -421,7 +421,7 @@ http://jmeter.apache.org/download_jmeter.cgi
 
 1)、不设置线程池，业务延时设置1000ms，压测后的吞吐量如下
 
-![1590115518298](D:\Program Files\typora-user-images\1590115518298.png)
+![1590115518298](https://smartan123.github.io/book/library/002-images/1590115518298.png)
 
 **平均时间:4900ms，异常率：0.00%，吞吐量：191.8/s**
 
@@ -429,7 +429,7 @@ http://jmeter.apache.org/download_jmeter.cgi
 
 2)、不设置线程池，业务延时设置2000ms，压测后的吞吐量如下
 
-![1590115842468](D:\Program Files\typora-user-images\1590115842468.png)
+![1590115842468](https://smartan123.github.io/book/library/002-images/1590115842468.png)
 
 **平均时间:9666ms，异常率：0.00%，吞吐量：98.5/s**
 
@@ -441,11 +441,11 @@ http://jmeter.apache.org/download_jmeter.cgi
 
 3)、设置线程池，最大线程设置200（跟不设置线程池时是一样的，默认最大就是200个线程），继续压测
 
-![1590116819697](D:\Program Files\typora-user-images\1590116819697.png)
+![1590116819697](https://smartan123.github.io/book/library/002-images/1590116819697.png)
 
 压测后吞吐量如下
 
-![1590116912938](D:\Program Files\typora-user-images\1590116912938.png)
+![1590116912938](https://smartan123.github.io/book/library/002-images/1590116912938.png)
 
 **平均时间:8884ms，异常率：0.00%，吞吐量：96.3/s**
 
@@ -455,11 +455,11 @@ http://jmeter.apache.org/download_jmeter.cgi
 
 4)、设置线程池，最大线程设置为400（最大线程数扩大了1倍），继续压测
 
-![1590117083659](D:\Program Files\typora-user-images\1590117083659.png)
+![1590117083659](https://smartan123.github.io/book/library/002-images/1590117083659.png)
 
 压测后吞吐量如下
 
-![1590117199458](D:\Program Files\typora-user-images\1590117199458.png)
+![1590117199458](https://smartan123.github.io/book/library/002-images/1590117199458.png)
 
 **平均时间:4946ms，异常率：0.00%，吞吐量：191.7/s**
 
@@ -469,11 +469,11 @@ http://jmeter.apache.org/download_jmeter.cgi
 
 5)、设置线程池，最大线程扩大到800（最大线程数扩大了4倍），继续压测
 
-![1590117358502](D:\Program Files\typora-user-images\1590117358502.png)
+![1590117358502](https://smartan123.github.io/book/library/002-images/1590117358502.png)
 
 压测后吞吐量如下
 
-![1590117530324](D:\Program Files\typora-user-images\1590117530324.png)
+![1590117530324](https://smartan123.github.io/book/library/002-images/1590117530324.png)
 
 **平均时间:2589ms，异常率：0.00%，吞吐量：358.7/s**
 
@@ -483,11 +483,11 @@ http://jmeter.apache.org/download_jmeter.cgi
 
 6)、设置线程池，最大线程扩大到1600（最大线程数扩大了8倍），继续压测（看什么时候出现异常）
 
-![1590117709683](D:\Program Files\typora-user-images\1590117709683.png)
+![1590117709683](https://smartan123.github.io/book/library/002-images/1590117709683.png)
 
 压测后吞吐量如下
 
-![1590117804724](D:\Program Files\typora-user-images\1590117804724.png)
+![1590117804724](https://smartan123.github.io/book/library/002-images/1590117804724.png)
 
 **平均时间:2356ms，异常率：0.00%，吞吐量：387.9/s**
 
@@ -497,11 +497,11 @@ http://jmeter.apache.org/download_jmeter.cgi
 
 7)、设置线程池，最大线程1600不变，将jmeter的压测线程设置为2000，继续压测（这时候还是没有出现异常）
 
-![1590117709683](D:\Program Files\typora-user-images\1590117709683.png)
+![1590117709683](https://smartan123.github.io/book/library/002-images/1590117709683.png)
 
 压测后吞吐量如下（下图右上角jmeter压测线程数改成了2000）
 
-![1590118102880](D:\Program Files\typora-user-images\1590118102880.png)
+![1590118102880](https://smartan123.github.io/book/library/002-images/1590118102880.png)
 
 **平均时间:2550ms，异常率：0.00%，吞吐量：682.2/s**
 
@@ -511,11 +511,11 @@ http://jmeter.apache.org/download_jmeter.cgi
 
 8)、设置线程池，最大线程扩到3000，继续压测（看会不会出现异常）
 
-![1590118436454](D:\Program Files\typora-user-images\1590118436454.png)
+![1590118436454](https://smartan123.github.io/book/library/002-images/1590118436454.png)
 
 压测后吞吐量如下
 
-![1590118530900](D:\Program Files\typora-user-images\1590118530900.png)
+![1590118530900](https://smartan123.github.io/book/library/002-images/1590118530900.png)
 
 **平均时间:2908ms，异常率：0.00%，吞吐量：607.2/s**
 
@@ -525,11 +525,11 @@ http://jmeter.apache.org/download_jmeter.cgi
 
 9)、设置线程池，最大线程3000不变，jmeter线程增加到4000，继续压测（看会不会出现异常）
 
-![1590118436454](D:\Program Files\typora-user-images\1590118436454.png)
+![1590118436454](https://smartan123.github.io/book/library/002-images/1590118436454.png)
 
 压测后吞吐量如下
 
-![1590118965685](D:\Program Files\typora-user-images\1590118965685.png)
+![1590118965685](https://smartan123.github.io/book/library/002-images/1590118965685.png)
 
 **终于出现异常了！**
 
@@ -552,7 +552,7 @@ http://jmeter.apache.org/download_jmeter.cgi
 Tomcat作为一个服务器来讲，必然运行着很多的线程，而每一个线程究竟是干什么的，这个需要非常的清楚，无论是打印断点，还是通过jstack进行线程栈分析，这都是必须要掌握的技能。
 本文带你基于Tomcat7，8，9的版本，识别Tomcat堆栈中的线程。
 
-![1590113416912](D:\Program Files\typora-user-images\1590113416912.png)
+![1590113416912](https://smartan123.github.io/book/library/002-images/1590113416912.png)
 
 ### 1、main线程
 
@@ -735,7 +735,7 @@ Tomcat作为一款优秀的服务器，不可能就只有1个线程，而是多�
 
 连接器在Tomcat中是一个重要的组件，叫做Tomcat前端，这个前端框架不是通常我们讲的Web前端，那是structs，javascript，jsp这些内容，这里讲的是以NIO的方式，来描述从socket请求到Request对象的过程，而我们理解的Tomcat后端，通常是以CoyoteAdapter为分界点，后端框架通过Mapper进行映射，可以总结为下面的示意图：
 
-![1590082327148](D:\Program Files\typora-user-images\1590082327148.png)
+![1590082327148](https://smartan123.github.io/book/library/002-images/1590082327148.png)
 
 
 
@@ -759,21 +759,21 @@ Tomcat前端接受的是Socket请求，通过前端框架组件进行http解析�
 
 ### 2、图解tomcat前端详细流程（源码详细分析解读见视频）
 
-![1590082370751](D:\Program Files\typora-user-images\1590082370751.png)
+![1590082370751](https://smartan123.github.io/book/library/002-images/1590082370751.png)
 
 
 
 工作流程的源码注释：
 
-![1590116465754](D:\Program Files\typora-user-images\1590116465754.png)
+![1590116465754](https://smartan123.github.io/book/library/002-images/1590116465754.png)
 
-![1590116509674](D:\Program Files\typora-user-images\1590116509674.png)
+![1590116509674](https://smartan123.github.io/book/library/002-images/1590116509674.png)
 
-![1590116636000](D:\Program Files\typora-user-images\1590116636000.png)
+![1590116636000](https://smartan123.github.io/book/library/002-images/1590116636000.png)
 
 ### 3、源码解读tomcat前端关键组件初始化和启动过程（详细分析解读见视频）
 
-![1590082449638](D:\Program Files\typora-user-images\1590082449638.png)
+![1590082449638](https://smartan123.github.io/book/library/002-images/1590082449638.png)
 
 
 
@@ -781,11 +781,11 @@ Tomcat前端接受的是Socket请求，通过前端框架组件进行http解析�
 
 http1.1的协议类，实际上这个类的初始化是由对应的Connector类进行初始化，我们可以看看server.xml中关于连接器的配置：
 
-![1590111405669](D:\Program Files\typora-user-images\1590111405669.png)
+![1590111405669](https://smartan123.github.io/book/library/002-images/1590111405669.png)
 
 对应的协议是HTTP/1.1，对于Connector来讲，有很多的协议处理器：
 
-![1590111922131](D:\Program Files\typora-user-images\1590111922131.png)
+![1590111922131](https://smartan123.github.io/book/library/002-images/1590111922131.png)
 
 对于普通的NIO连接器，其就是Http11NioProtocol这个类。
 
@@ -815,7 +815,7 @@ Worker（exec即SocketProcessor）
 
 从以下类的注释就可以看出来：
 
-![1590111995051](D:\Program Files\typora-user-images\1590111995051.png)
+![1590111995051](https://smartan123.github.io/book/library/002-images/1590111995051.png)
 
 **a.socket acceptor线程池**
 
@@ -835,7 +835,7 @@ PollerEvent不单单还有前面包装的NioChannel，还持有NioEndPoint.KeyAt
 
 Poller中维护者的是一个Selector对象，其实在Tomcat的前端中存在了n多个的Selector对象，当前这个Selector主要是用于从Acceptor传过来的NioChannel进行感兴趣事件的NIO注册操作，并轮询感兴趣的事件发生。
 
-![1590112181998](D:\Program Files\typora-user-images\1590112181998.png)
+![1590112181998](https://smartan123.github.io/book/library/002-images/1590112181998.png)
 
 这里还有一个Queue队列，这里采用的是SynchronizedQueue，需要注意的是，这里并不是JDK包中的SynchronizedQueue同步队列，而是tomcat中自定义实现的SynchronizedQueue，不要产生混淆，实现思路很简单，就是一个普通的数组演变的。
 
@@ -847,7 +847,7 @@ Poller中维护者的是一个Selector对象，其实在Tomcat的前端中存在
 
 poller线程中最后一步时候processKey方法，这个方法最终会调用processSocket方法：
 
-![1590112676397](D:\Program Files\typora-user-images\1590112676397.png)
+![1590112676397](https://smartan123.github.io/book/library/002-images/1590112676397.png)
 
 SocketProcessor是工作线程池中的工作方法，上述工作线程池中一共有两个选择，当JDK5之前，SocketProcessor类本身也是一个Runable线程，直接可以执行run方法，这就没有什么线程池的概念了；而在JDK5之后，ThreadExecutor是JDK默认的线程池，Tomcat中集成了进来，也就是调用其executor.execute方法，将SocketProcessor任务传进去。
 
@@ -886,7 +886,7 @@ NIO的前端框架主要是由三个不同的线程依次分工协作：
 
 对于BIO的整体框图，基本和NIO保持类似，整体流程变化不大，如下图所示：
 
-![1590081042566](D:\Program Files\typora-user-images\1590081042566.png)
+![1590081042566](https://smartan123.github.io/book/library/002-images/1590081042566.png)
 
 ### 2、Http11Protocol类详解
 
@@ -1013,7 +1013,7 @@ max是最多能承受一百次请求的共享复用，就是在timeout时间内�
 
 对应的Tomcat的服务器端的配置：
 
-![1590080211887](D:\Program Files\typora-user-images\1590080211887.png)
+![1590080211887](https://smartan123.github.io/book/library/002-images/1590080211887.png)
 
 keepAliveTimeout：表示在下次请求过来之前，tomcat保持该连接多久。这就是说假如客户端不断有请求过来，且为超过过期时间，则该连接将一直保持。
 
@@ -1041,13 +1041,13 @@ maxKeepAliveRequests：表示该连接最大支持的请求数。超过该请求
 
 
 
-![1590079380917](D:\Program Files\typora-user-images\1590079380917.png)
+![1590079380917](https://smartan123.github.io/book/library/002-images/1590079380917.png)
 
-![1590079392963](D:\Program Files\typora-user-images\1590079392963.png)
+![1590079392963](https://smartan123.github.io/book/library/002-images/1590079392963.png)
 
-![1590079402653](D:\Program Files\typora-user-images\1590079402653.png)
+![1590079402653](https://smartan123.github.io/book/library/002-images/1590079402653.png)
 
-![1590079413774](D:\Program Files\typora-user-images\1590079413774.png)
+![1590079413774](https://smartan123.github.io/book/library/002-images/1590079413774.png)
 
 
 
@@ -1075,7 +1075,7 @@ maxKeepAliveRequests：表示该连接最大支持的请求数。超过该请求
 
 在NIO2的通道下，Acceptor线程结束之后，并不会直接调用工作线程也就是SocketProcessor，而是利用NIO2的机制，利用CompleteHandler完成处理器去异步处理任务。
 
-![1590076539802](D:\Program Files\typora-user-images\1590076539802.png)
+![1590076539802](https://smartan123.github.io/book/library/002-images/1590076539802.png)
 
 这正是CompleteHandler完成处理器的一个特性。
 
@@ -1093,7 +1093,7 @@ maxKeepAliveRequests：表示该连接最大支持的请求数。超过该请求
 
 2）.对于内核分离器通知CompleteHandler的时机是什么，对比NIO的缓冲区，实质是当内核态缓冲区的数据已经复制到用户态缓冲区时候，这个时候触发CompleteHandler，这相当于比NIO的模式更进一步，如下图：
 
-![1590076567707](D:\Program Files\typora-user-images\1590076567707.png)
+![1590076567707](https://smartan123.github.io/book/library/002-images/1590076567707.png)
 
 NIO只是内核缓冲区就绪才告诉客户端去读，这个时候用户态缓冲区是空的，你得执行完socketChannel.read之后，用户态缓冲区才会填满；
 
@@ -1121,7 +1121,7 @@ TaskQueue是队列，Thread工厂针对于创建的线程名称进行了一下�
 
 由下图可见，bio，nio都是由用户态发起数据拷贝（read操作），而nio2（aio）则是由操作系统发起数据拷贝，所有的io操作都是由操作系统主动完成。所以io操作和用户业务逻辑的执行都是异步化的。
 
-![1590076600430](D:\Program Files\typora-user-images\1590076600430.png)
+![1590076600430](https://smartan123.github.io/book/library/002-images/1590076600430.png)
 
 
 
@@ -1141,7 +1141,7 @@ APR通道是Tomcat比较有特色的通道，在早期的JDK的NIO框架不成�
 
 **APR通道底层最终是通过tomcat-native实现的，具体的源码分析讲解请观看视频**
 
-![1590074831386](D:\Program Files\typora-user-images\1590074831386.png)
+![1590074831386](https://smartan123.github.io/book/library/002-images/1590074831386.png)
 
 ### 2、APR通道详解（见源码分析视频）
 
@@ -1157,7 +1157,7 @@ APR通道的SSL信道上下文直接来自于native底层
 
 tomcat中对于这些jni的调用部分，做出了一个tomcat的子项目，叫做Tomcat-native，在这个调用层级中，一部分是java部分，也就是AprEndpoint类中看到的native方法，这些native方法有很多，这些java的包，对应调用的就是jni的native的C的代码，是一一对应的，如下图所示：
 
-![1590074929764](D:\Program Files\typora-user-images\1590074929764.png)
+![1590074929764](https://smartan123.github.io/book/library/002-images/1590074929764.png)
 
 对于tomcat-native最好的教程应该是在example目录中，这个目录使用一个例子完整的复现了Tomcat前端APREndpoint的几个线程组件的工作模式；对于test目录也可以从这个点切入进去，是一个好的调试tomcat-native代码的过程。
 
@@ -1175,7 +1175,7 @@ Apache Portable Runtime (APR) project，这个库定位于在操作系统的底�
 
 tomcat-native除了调用APR网络库保证高性能的网络传输以外，对于SSL/TLS的支持还调用了openssl。对于OpenSSL项目来说，市面上大多数的SSL信道实现都是用OpenSSL做的，这也就是说，如果要OpenSSL暴露出一个漏洞出来，那破坏性都是惊人的。
 
-![1590075035030](D:\Program Files\typora-user-images\1590075035030.png)
+![1590075035030](https://smartan123.github.io/book/library/002-images/1590075035030.png)
 
 ### 6、总结
 
@@ -1183,7 +1183,7 @@ APR通道只有很小的一部分是java，大部分的源码都是C的，而且
 
 如下图所示，java这一层调用的是jni，相当于是一个接口，然后底层tomcat-native，相当于是实现，只不过是用c实现的，然后apr和openssl又是独立的c组件。
 
-![1590075088393](D:\Program Files\typora-user-images\1590075088393.png)
+![1590075088393](https://smartan123.github.io/book/library/002-images/1590075088393.png)
 
 
 
@@ -1197,11 +1197,11 @@ sendfile实质是linux系统中一项优化技术，用以发送文件和网络�
 
 大家可以在linux上执行 man sendfile 这个命令，查看sendfile的定义
 
-![1590073153559](D:\Program Files\typora-user-images\1590073153559.png)
+![1590073153559](https://smartan123.github.io/book/library/002-images/1590073153559.png)
 
 上述定义可以看出，sendfile()实际是作用于数据拷贝在两个文件描述符之间的操作函数.这个拷贝操作是在内核中完成的,所以称为"零拷贝".sendfile函数比起read和write函数高效得多,因为read和write是要把数据拷贝到用户应用层操作，多了一个步骤，如下图所示：
 
-![1590072613168](D:\Program Files\typora-user-images\1590072613168.png)
+![1590072613168](https://smartan123.github.io/book/library/002-images/1590072613168.png)
 
 
 
@@ -1209,7 +1209,7 @@ sendfile实质是linux系统中一项优化技术，用以发送文件和网络�
 
 ### 2、linux的sendfile机制（零拷贝）
 
-![1590072646394](D:\Program Files\typora-user-images\1590072646394.png)
+![1590072646394](https://smartan123.github.io/book/library/002-images/1590072646394.png)
 
 
 
@@ -1219,9 +1219,9 @@ sendfile实质是linux系统中一项优化技术，用以发送文件和网络�
 
 **这部分源码详细分析请查看视频**
 
-![1590072679844](D:\Program Files\typora-user-images\1590072679844.png)
+![1590072679844](https://smartan123.github.io/book/library/002-images/1590072679844.png)
 
-![1590072689154](D:\Program Files\typora-user-images\1590072689154.png)
+![1590072689154](https://smartan123.github.io/book/library/002-images/1590072689154.png)
 
 值得注意的一点是，一般http响应的数据包都会进行压缩，这样的好处是能极大的减小带宽占用，而响应头中发现了compression压缩属性，浏览器会自动首先进行解压缩，从而正确的将response响应主体刷到页面中。
 
@@ -1233,7 +1233,7 @@ sendfile实质是linux系统中一项优化技术，用以发送文件和网络�
 
 对于BIO（**从tomcat8开始已经抛弃BIO通道了，下面源码截图来自于tomcat7**）来说，JIOEndpoint是不支持sendfile的，这个可以通过代码中看出来：
 
-![1590072736960](D:\Program Files\typora-user-images\1590072736960.png)
+![1590072736960](https://smartan123.github.io/book/library/002-images/1590072736960.png)
 
 
 
@@ -1249,13 +1249,13 @@ sendfile实质是linux系统中一项优化技术，用以发送文件和网络�
 
 第二阶段，servlet处理完之后，业务逻辑完成，对应的Response该commit了，而在Response的准备阶段，会初始化这个SendFileData的数据结构，这块的代码逻辑都在Http11NioProcessor类中，下图中的prepareSendfile方法就是从前面DefaultServlet中设置的reqeust属性中拿到file名称，字符位置的start，end，然后将这些属性作为传入的参数，初始化SendFileData实例。
 
-![1590072760621](D:\Program Files\typora-user-images\1590072760621.png)
+![1590072760621](https://smartan123.github.io/book/library/002-images/1590072760621.png)
 
 
 
 第三阶段，我们记得NIO前端通道的Acceptor，Poller线程，Worker线程的三个线程，当Worker线程干完活之后，返回给客户端，依然要通过Poller线程，也就是会重新注册KeyEvent，读取KeyAttachment，这个时候当为sendfile的时候，前面初始化的SendFileData实例是会注册在KeyAttachment上的，上图的processSendfile就是Poller线程的run中的一个判断分支，当为sendfile的时候，Poller线程就对SendFileData数据结构中的file名字取出，通过FileChannel的transferTo方法，这个transferTo方法本质上就是sendfile在tomcat源码中的具体体现，如下图所示
 
-![1590072769371](D:\Program Files\typora-user-images\1590072769371.png)
+![1590072769371](https://smartan123.github.io/book/library/002-images/1590072769371.png)
 
 
 
@@ -1267,11 +1267,11 @@ APR通道是开辟一个独立的线程来处理sendfile的，如下图所示，
 
 最后，对于APR通道是通过JNI调用的APR库，sendfile自然就不是java的API了
 
-![1590072795214](D:\Program Files\typora-user-images\1590072795214.png)
+![1590072795214](https://smartan123.github.io/book/library/002-images/1590072795214.png)
 
-![1590072806036](D:\Program Files\typora-user-images\1590072806036.png)
+![1590072806036](https://smartan123.github.io/book/library/002-images/1590072806036.png)
 
-![1590072813118](D:\Program Files\typora-user-images\1590072813118.png)
+![1590072813118](https://smartan123.github.io/book/library/002-images/1590072813118.png)
 
 ### 7、总结
 
@@ -1331,7 +1331,7 @@ Http11Processor是Tomcat前端比较重要的处理类，Work工作线程将任�
 
 设置非常简单，但是要注意一点，usesendfile和compression属性必须同时设置，且互斥，如下图所示：
 
-![1590072212126](D:\Program Files\typora-user-images\1590072212126.png)
+![1590072212126](https://smartan123.github.io/book/library/002-images/1590072212126.png)
 
 ### 4、与sendfile的互斥性
 
@@ -1341,7 +1341,7 @@ Http11Processor是Tomcat前端比较重要的处理类，Work工作线程将任�
 
 **可以这么来理解，对于compression必然需要在用户空间内存转接中（压缩必须拿到用户态内存中来压）进行操作，也就是下图中用户空间部分，但是sendfile又要求不经过用户空间，所以两者是矛盾的。**
 
-![1590072239137](D:\Program Files\typora-user-images\1590072239137.png)
+![1590072239137](https://smartan123.github.io/book/library/002-images/1590072239137.png)
 
 ### 5、总结
 
@@ -1361,7 +1361,7 @@ Http11Processor是Tomcat前端比较重要的处理类，Work工作线程将任�
 
 **我们先来看看一般的TCP三次握手和传输阶段：**
 
-![1590070632651](D:\Program Files\typora-user-images\1590070632651.png)
+![1590070632651](https://smartan123.github.io/book/library/002-images/1590070632651.png)
 
 首先，客户端发出一个SYN包，这个包的作用是与服务器端开始尝试进行链接；
 
@@ -1419,7 +1419,7 @@ http协议的早期是，每开启一个http链接，是要进行一次socket，
 
 举一个例子，用户浏览一个网页时，除了网页本身外，还引用了多个 javascript 文件，多个 css 文件，多个图片文件，并且这些文件都在同一个 HTTP 服务器上，算作一个http请求，而如果浏览器支持keepalive的话，那么请求头中会有如下connection属性，如下图所示：
 
-![1590068724337](D:\Program Files\typora-user-images\1590068724337.png)
+![1590068724337](https://smartan123.github.io/book/library/002-images/1590068724337.png)
 
 对于keepalive的部分，主要集中在Connection属性当中，这个属性可以设置两个值：
 
@@ -1429,7 +1429,7 @@ keepalive（告诉WEB服务器或者代理服务器，在完成本次请求的�
 
 从整体可以再看看keepalive的优化的结果如下：
 
-![1590068312542](D:\Program Files\typora-user-images\1590068312542.png)
+![1590068312542](https://smartan123.github.io/book/library/002-images/1590068312542.png)
 
 
 
@@ -1450,7 +1450,7 @@ keepalive（告诉WEB服务器或者代理服务器，在完成本次请求的�
 
 客户端主动关闭连接时，会发送最后一个ack后，然后会进入TIME_WAIT状态，再停留2个MSL时间，进入CLOSED状态，原理如下图所示：
 
-![1590068924782](D:\Program Files\typora-user-images\1590068924782.png)
+![1590068924782](https://smartan123.github.io/book/library/002-images/1590068924782.png)
 
 ### 2、keepalive的配置实现（两个参数）
 
@@ -1521,13 +1521,13 @@ JAVA_OPTS="-XX:+UseSerialGC -Xms64m -Xmx512m -XX:+PrintGCDetails -XX:+PrintGCTim
 
 2）、设置后启动tomcat，使用jmeter进行压测（jmeter设置线程为1000，每个线程循环10次），访问test_web
 
-![1590064622218](D:\Program Files\typora-user-images\1590064622218.png)
+![1590064622218](https://smartan123.github.io/book/library/002-images/1590064622218.png)
 
 3）、查看吞吐量
 
 **压测结果：平均时间1.585s，吞吐量378.6/s，异常1.12%**
 
-![1590064794634](D:\Program Files\typora-user-images\1590064794634.png)
+![1590064794634](https://smartan123.github.io/book/library/002-images/1590064794634.png)
 
 将gc.log拷贝出来，改名gc1.log。预备比较
 
@@ -1550,7 +1550,7 @@ JAVA_OPTS="-XX:+UseSerialGC -Xms64m -Xmx512m -XX:+PrintGCDetails -XX:+PrintGCTim
 
 **压测结果：平均时间1.161s，吞吐量407.7/s，异常0.40%**
 
-![1590065401961](D:\Program Files\typora-user-images\1590065401961.png)
+![1590065401961](https://smartan123.github.io/book/library/002-images/1590065401961.png)
 
 将gc.log拷贝出来，改名gc2.log。预备比较
 
@@ -1566,13 +1566,13 @@ JAVA_OPTS="-XX:+UseSerialGC -Xms64m -Xmx512m -XX:+PrintGCDetails -XX:+PrintGCTim
 
 **gc1.log中的gc总次数是13次**
 
-![1590066198018](D:\Program Files\typora-user-images\1590066198018.png)
+![1590066198018](https://smartan123.github.io/book/library/002-images/1590066198018.png)
 
 
 
 **gc2.log中gc总次数12次，比串行时少了1次，性能是有所提升的。**
 
-![1590066087727](D:\Program Files\typora-user-images\1590066087727.png)
+![1590066087727](https://smartan123.github.io/book/library/002-images/1590066087727.png)
 
 ### 4、调整年轻代大小
 
@@ -1584,7 +1584,7 @@ apAtGC -Xloggc:../logs/gc.log"
 
 设置完后再次重启，用jmeter进行压测（压测参数不变），结果如下：
 
-![1590066490885](D:\Program Files\typora-user-images\1590066490885.png)
+![1590066490885](https://smartan123.github.io/book/library/002-images/1590066490885.png)
 
 
 
@@ -1592,7 +1592,7 @@ apAtGC -Xloggc:../logs/gc.log"
 
 性能再一次的得到了提升。再次分析gc.log 如下图：
 
-![1590066772082](D:\Program Files\typora-user-images\1590066772082.png)
+![1590066772082](https://smartan123.github.io/book/library/002-images/1590066772082.png)
 
 **gc收集总次数减少为8次，从gc的收集次数也再次证明了调整参数后性能的确得到了极大的提升。**
 
@@ -1605,7 +1605,7 @@ intGCDateStamps -XX:+PrintHeapAtGC -Xloggc:../logs/gc.log"
 
 重启tomcat后使用jmeter再次压测（压测参数不变），压测结果如图：
 
-![1590067084119](D:\Program Files\typora-user-images\1590067084119.png)
+![1590067084119](https://smartan123.github.io/book/library/002-images/1590067084119.png)
 
 **压测结果：平均时间0.897s，吞吐量431.2/s，异常0.14%**
 

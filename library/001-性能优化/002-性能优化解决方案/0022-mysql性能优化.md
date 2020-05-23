@@ -554,7 +554,7 @@ set global log_queries_not_using_indexes=on;
 
 
 
-### 5、MySQL慢查日志的存储格式解析：
+### 5、MySQL慢查日志的存储格式解析
 
 ![1590135510952](https://smartan123.github.io/book/library/002-images/1590135510952.png)
 

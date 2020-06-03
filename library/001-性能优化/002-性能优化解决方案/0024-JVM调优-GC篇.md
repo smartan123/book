@@ -1,4 +1,4 @@
-# JVM调优-GC篇
+# JVM调优-GC篇 [ [配套教程](https://coding.imooc.com/class/442.html) ]
 
 [TOC]
 

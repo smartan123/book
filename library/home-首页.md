@@ -16,6 +16,7 @@
 
 —— **6+1模式全方位掌握《全技术栈性能调优》，晋升救火队长，实现加官进爵！**  
 
-<center><font Size=6 face="微软雅黑">[ [开始学习](https://coding.imooc.com/class/442.html) ]</font><br>技术交流q群：963060292</center>
+<center><font Size=6 face="微软雅黑">[ [开始学习](https://coding.imooc.com/class/442.html) ]</font><br><font Size=4>技术交流q群：963060292</font></center>
 
 <hr />
+

@@ -1,5 +1,7 @@
 # Nginx性能优化 [ [配套教程](https://coding.imooc.com/class/442.html) ]
 
+**技术交流q群：963060292**
+
 ## 一、为什么是nginx而不是apache？
 
 ### 1、轻量级：同样起web 服务，比apache 占用更少的内存及资源
@@ -118,4 +120,4 @@
 
 ### worker_connections生效机制
 
-## 未完，待续。。。
+## 未完，待续。。。技术交流q群：963060292
